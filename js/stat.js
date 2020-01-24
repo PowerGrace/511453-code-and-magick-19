@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var CLOUD_WIDTH = 420;
 var CLOUD_HEIGHT = 270;
@@ -59,5 +59,5 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillRect(BAR_X + BAR_X_GAP * i, BAR_Y, BAR_WIDTH, (MAX_BAR_HEIGHT * time / maxTime) * -1);
     ctx.fillStyle = '#000000';
     ctx.fillText(time, BAR_X + BAR_X_GAP * i, MAX_TIME_Y + MAX_BAR_HEIGHT - (MAX_BAR_HEIGHT * time / maxTime));
-  };
+  }
 };
