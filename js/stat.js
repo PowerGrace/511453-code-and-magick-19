@@ -6,7 +6,6 @@ var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var GAP = 10;
 var MAX_BAR_HEIGHT = 150;
-var GAP_BAR_WIDTH = 50;
 var BAR_WIDTH = 40;
 var BAR_X = 150;
 var BAR_X_GAP = 50 + BAR_WIDTH;
@@ -60,5 +59,5 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillRect(BAR_X + BAR_X_GAP * i, BAR_Y, BAR_WIDTH, (MAX_BAR_HEIGHT * time / maxTime) * -1);
     ctx.fillStyle = '#000000';
     ctx.fillText(time, BAR_X + BAR_X_GAP * i, MAX_TIME_Y + MAX_BAR_HEIGHT - (MAX_BAR_HEIGHT * time / maxTime));
-  }
+  };
 };
