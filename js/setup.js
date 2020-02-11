@@ -14,34 +14,6 @@ var show = function (hiddenElement) {
 };
 // show(userDialog);
 
-var setupOpen = document.querySelector('.setup-open');
-var setupClose = userDialog.querySelector('.setup-close');
-
-setupOpen.addEventListener('click', function () {
-  userDialog.classList.remove('hidden');
-  document.addEventListener('keydown', function (evt) {
-    if (evt.key === 'Escape') {
-      userDialog.classList.add('hidden');
-    }
-  });
-});
-
-setupOpen.addEventListener('keydown', function (evt) {
-  if (evt.key === 'Enter') {
-    userDialog.classList.remove('hidden');
-  }
-});
-
-setupClose.addEventListener('click', function () {
-  userDialog.classList.add('hidden');
-});
-
-setupClose.addEventListener('keydown', function (evt) {
-  if (evt.key === 'Enter') {
-    userDialog.classList.add('hidden');
-  }
-});
-
 var similarListElement = userDialog.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .content
@@ -84,6 +56,34 @@ var addElement = function (array) {
 similarListElement.appendChild(addElement(generateWizards()));
 
 show(userDialog.querySelector('.setup-similar'));
+
+var setupOpen = document.querySelector('.setup-open');
+var setupClose = userDialog.querySelector('.setup-close');
+
+setupOpen.addEventListener('click', function () {
+  userDialog.classList.remove('hidden');
+  document.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+      userDialog.classList.add('hidden');
+    }
+  });
+});
+
+setupOpen.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Enter') {
+    userDialog.classList.remove('hidden');
+  }
+});
+
+setupClose.addEventListener('click', function () {
+  userDialog.classList.add('hidden');
+});
+
+setupClose.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Enter') {
+    userDialog.classList.add('hidden');
+  }
+});
 
 var setupWizard = userDialog.querySelector('.setup-wizard');
 var wizardCoat = setupWizard.querySelector('.wizard-coat');
